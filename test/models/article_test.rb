@@ -5,4 +5,7 @@ class ArticleTest < ActiveSupport::TestCase
     article = Article.new
     assert_not article.save
   end
+  class Article < ApplicationRecord
+    validates :title, presence: true
+  end
 end
